@@ -30,5 +30,3 @@ public abstract class Main {
         }
     }
 }
-
-// test
