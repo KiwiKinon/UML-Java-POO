@@ -1,0 +1,24 @@
+-classpath
+'D:/windows/Bureau/projet/Lorann/showboard/target/classes;D:/windows/Bureau/projet/Lorann/contract/target/classes;D:/windows/Bureau/projet/Lorann/Element/target/classes;D:/windows/Bureau/projet/Lorann/model/target/classes;D:/windows/Bureau/projet/Lorann/Order/target/classes;D:/windows/Bureau/projet/Lorann/view/target/classes;D:/windows/Bureau/projet/Lorann/controller/target/classes;D:/windows/Bureau/projet/Lorann/main/target/classes;C:/Users/sylva/.m2/repository/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar'
+-encoding
+'Cp1252'
+-protected
+-sourcepath
+'D:/windows/Bureau/projet/Lorann/showboard/src/main/java;D:/windows/Bureau/projet/Lorann/showboard/target/generated-sources/annotations;D:/windows/Bureau/projet/Lorann/contract/src/main/java;D:/windows/Bureau/projet/Lorann/contract/target/generated-sources/annotations;D:/windows/Bureau/projet/Lorann/Element/src/main/java;D:/windows/Bureau/projet/Lorann/Element/target/generated-sources/annotations;D:/windows/Bureau/projet/Lorann/model/src/main/java;D:/windows/Bureau/projet/Lorann/model/target/generated-sources/annotations;D:/windows/Bureau/projet/Lorann/Order/src/main/java;D:/windows/Bureau/projet/Lorann/Order/target/generated-sources/annotations;D:/windows/Bureau/projet/Lorann/view/src/main/java;D:/windows/Bureau/projet/Lorann/view/target/generated-sources/annotations;D:/windows/Bureau/projet/Lorann/controller/src/main/java;D:/windows/Bureau/projet/Lorann/controller/target/generated-sources/annotations;D:/windows/Bureau/projet/Lorann/main/src/main/java;D:/windows/Bureau/projet/Lorann/main/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2018. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/windows/Bureau/projet/Lorann/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'lorann 0.0.1-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/8/docs/api' 'D:/windows/Bureau/projet/Lorann/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'lorann 0.0.1-SNAPSHOT API'

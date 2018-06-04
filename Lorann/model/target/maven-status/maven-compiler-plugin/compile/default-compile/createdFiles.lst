@@ -1,0 +1,16 @@
+element\mobile\MyVehicle.class
+model\dao\LorannBDDConnector.class
+element\mobile\IMobile.class
+element\mobile\IMobileMonster.class
+element\mobile\Monster4.class
+model\ModelFacade.class
+element\mobile\Monster3.class
+model\Road.class
+element\mobile\Mobile.class
+model\IInsaneVehiclesModel.class
+model\IRoad.class
+model\dao\AbstractDAO.class
+element\mobile\Monster2.class
+element\mobile\Monster1.class
+model\dao\ExampleDAO.class
+model\InsaneVehiclesModel.class
