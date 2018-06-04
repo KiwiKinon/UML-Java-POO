@@ -5,7 +5,7 @@ import java.awt.Point;
 import element.Element;
 import element.Permeability;
 import element.Sprite;
-import model.IRoad;
+import model.IMap;
 import showboard.IBoard;
 
 abstract class Mobile extends Element implements IMobile {
@@ -21,12 +21,12 @@ abstract class Mobile extends Element implements IMobile {
 	private Boolean alive = true;
 
 	/** The road. */
-	private IRoad road;
+	private IMap road;
 
 	/** The board. */
 	private IBoard board;
 
-	Mobile(final Sprite sprite, final IRoad road, final Permeability permeability) {
+	Mobile(final Sprite sprite, final IMap road, final Permeability permeability) {
 		super(sprite, permeability);
 		this.setRoad(road);
 		this.position = new Point();
@@ -46,13 +46,13 @@ abstract class Mobile extends Element implements IMobile {
 	 * @param permeability
 	 *            the permeability
 	 */
-	Mobile(final int x, final int y, final Sprite sprite, final IRoad road, final Permeability permeability) {
+	Mobile(final int x, final int y, final Sprite sprite, final IMap road, final Permeability permeability) {
 		this(sprite, road, permeability);
 		this.setX(x);
 		this.setY(y);
 	}
 
-	Mobile(final int z, final int x, final int y, final Sprite sprite, final IRoad road,
+	Mobile(final int z, final int x, final int y, final Sprite sprite, final IMap road,
 			final Permeability permeability) {
 		this(sprite, road, permeability);
 		this.setZ();
@@ -182,7 +182,7 @@ abstract class Mobile extends Element implements IMobile {
 	 *
 	 * @return the road
 	 */
-	public IRoad getRoad() {
+	public IMap getRoad() {
 		return this.road;
 	}
 
@@ -192,7 +192,7 @@ abstract class Mobile extends Element implements IMobile {
 	 * @param road
 	 *            the new road
 	 */
-	private void setRoad(final IRoad road) {
+	private void setRoad(final IMap road) {
 		this.road = road;
 	}
 

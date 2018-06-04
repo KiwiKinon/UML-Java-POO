@@ -4,14 +4,14 @@ import java.io.IOException;
 
 import element.Permeability;
 import element.Sprite;
-import model.IRoad;
+import model.IMap;
 
 public class Monster4 extends Mobile {
 
 	/** The Constant SPRITE. */
 	private static final Sprite image4 = new Sprite('4', "monster_4.png");
 
-	public Monster4(final int MonsterX, final int MonsterY, final IRoad road) throws IOException {
+	public Monster4(final int MonsterX, final int MonsterY, final IMap road) throws IOException {
 		super(MonsterX, MonsterY, image4, road, Permeability.BLOCKING);
 		image4.loadImage();
 	}

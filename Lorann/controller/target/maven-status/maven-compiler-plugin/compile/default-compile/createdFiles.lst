@@ -1,4 +1,4 @@
+controller\LorannController.class
+controller\ILorannController.class
 controller\ControllerFacade.class
-controller\IIinsaneVehiclesController.class
-controller\InsaneVehiclesController.class
-controller\InsaneVehiclesController$1.class
+controller\LorannController$1.class

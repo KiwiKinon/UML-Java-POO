@@ -2,11 +2,11 @@ package main;
 
 import java.io.IOException;
 
-import controller.IIinsaneVehiclesController;
-import controller.InsaneVehiclesController;
-import model.IInsaneVehiclesModel;
-import model.InsaneVehiclesModel;
-import view.InsaneVehiclesView;
+import controller.ILorannController;
+import controller.LorannController;
+import model.ILorannModel;
+import model.LorannModel;
+import view.LorannView;
 
 /**
  * <h1>The Class Main.</h1>
@@ -39,11 +39,11 @@ public abstract class Main {
 	private static final int Monster4Y = 15;
 
 	public static void main(final String[] args) throws IOException, InterruptedException {
-		final IInsaneVehiclesModel model = new InsaneVehiclesModel("road.txt", startX, startY, Monster1X, Monster1Y,
+		final ILorannModel model = new LorannModel("map.txt", startX, startY, Monster1X, Monster1Y,
 				Monster2X, Monster2Y, Monster3X, Monster3Y, Monster4X, Monster4Y);
-		final InsaneVehiclesView view = new InsaneVehiclesView(model.getRoad(), model.getMyVehicle(),
+		final LorannView view = new LorannView(model.getRoad(), model.getMyVehicle(),
 				model.getMonster1(), model.getMonster2(), model.getMonster3(), model.getMonster4());
-		final IIinsaneVehiclesController controller = new InsaneVehiclesController(view, model);
+		final ILorannController controller = new LorannController(view, model);
 		view.setOrderPerformer(controller.getOrderPeformer());
 
 		controller.play();
