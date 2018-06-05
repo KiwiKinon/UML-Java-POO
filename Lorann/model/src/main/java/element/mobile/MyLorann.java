@@ -1,6 +1,10 @@
 package element.mobile;
 
+import java.io.File;
 import java.io.IOException;
+
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 import element.Permeability;
 import element.Sprite;
@@ -38,6 +42,8 @@ public class MyLorann extends Mobile {
 	/** The Constant spriteMoveDownRight. */
 	private static final Sprite spriteMoveDownRight = new Sprite('H', "lorann_br.png");
 
+	private static final Sprite spriteExplode = new Sprite('H', "monster_1.png");
+
 	// private static final Sprite spell1 = new Sprite('�', "fireball_1.png");
 
 	// private static final Sprite spell2 = new Sprite('�', "fireball_2.png");
@@ -50,7 +56,7 @@ public class MyLorann extends Mobile {
 
 	private static long tempsPrecedent = System.currentTimeMillis();
 
-	private static int i = 0;
+	// private static int i = 0;
 
 	private static final Sprite[] sprites = { spriteMoveRight, spriteMoveDownRight, spriteMoveDown, spriteMoveDownLeft,
 			spriteMoveLeft, spriteMoveUpLeft, spriteMoveUp, spriteMoveUpRight };
@@ -83,9 +89,8 @@ public class MyLorann extends Mobile {
 	}
 
 	/*
-	 * private List<Spell> spell;
-	 * 
-	 * public List<Spell> getSpell() { return this.spell; }
+	 * private List<Spell> spell; public List<Spell> getSpell() { return this.spell;
+	 * }
 	 */
 
 	@Override
@@ -129,11 +134,26 @@ public class MyLorann extends Mobile {
 	// }
 	// }
 
-	// @Override
-	// protected final void die() {
-	// super.die();
-	// //this.setSprite(spriteExplode);
-	// }
+	@Override
+	public final void die() {
+		super.die();
+		this.setSprite(spriteExplode);
+
+		File Clap = new File("Music/4.wav");
+		PlaySound(Clap);
+	}
+
+	static void PlaySound(File Sound) {
+
+		try {
+			Clip clip = AudioSystem.getClip();
+			clip.open(AudioSystem.getAudioInputStream(Sound));
+			clip.start();
+
+		} catch (Exception e) {
+
+		}
+	}
 
 	@Override
 	public final void doNothing() {

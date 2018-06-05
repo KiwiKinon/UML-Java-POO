@@ -1,3 +1,4 @@
 view\LorannView.class
 view\ViewFacade.class
 view\ILorannView.class
+view\Sound.class
