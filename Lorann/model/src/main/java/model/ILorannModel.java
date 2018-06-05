@@ -23,7 +23,7 @@ public interface ILorannModel {
      *
      * @return the myVehicle
      */
-    IMobile getMyVehicle();
+    IMobile getMyLorann();
 
 	IMobile getMonster1();
 
@@ -33,6 +33,6 @@ public interface ILorannModel {
     
 	IMobile getMonster4();
 
-	IMobile getSort();
+	IMobile getSpell();
 
 }

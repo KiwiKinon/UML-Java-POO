@@ -108,7 +108,7 @@ public interface IMobile extends IPawn, IElement {
 
 	void moveMonster4(int lorannX, int lorannY) throws InterruptedException;
 
-	void moveSort() throws InterruptedException;
+	void moveSpell(int lorannx, int loranny) throws InterruptedException;
 
 	void State(int lorannX, int lorannY, Boolean state);
 

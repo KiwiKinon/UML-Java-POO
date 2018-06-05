@@ -239,6 +239,7 @@ abstract class Mobile extends Element implements IMobile {
 	public void die() {
 		this.alive = false;
 		this.setHasMoved();
+		this.setPermeability(Permeability.PENETRABLE);
 	}
 
 	/*

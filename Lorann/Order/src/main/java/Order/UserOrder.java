@@ -8,20 +8,6 @@ package Order;
  */
 public enum UserOrder {
 
-    /** The right. */
-    RIGHT,
+	RIGHT, LEFT, DOWN, NOP, UP, HG, HD, BG, BD, ENTER,
 
-    /** The left. */
-    LEFT,
-
-    /** The down */
-    DOWN, 
-    NOP,  
-    UP, 
-    HG,
-    HD,
-    BG,
-    BD, 
-    ENTER,
-    
 }

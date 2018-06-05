@@ -52,7 +52,7 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 	/** The order performer. */
 	private IOrderPerformer orderPerformer;
 
-	private IMobile sort;
+	private IMobile spell;
 
 	public static int BX;
 
@@ -73,21 +73,21 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 	 *            the monster 3
 	 * @param monster1
 	 *            the monster 1
-	 * @param sort
-	 *            the sort
+	 * @param spell
+	 *            the spell
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public LorannView(final IMap road, final IMobile myVehicle, final IMobile monster1, final IMobile monster2,
-			final IMobile monster3, final IMobile monster4, final IMobile sort) throws IOException {
+			final IMobile monster3, final IMobile monster4, final IMobile spell) throws IOException {
 		this.setView(roadView);
 		this.setRoad(road);
 		this.setMyVehicle(myVehicle);
 		this.getMyVehicle().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getMyVehicle().getY(), this.getRoad().getWidth(), roadView));
-		this.setSort(sort);
-		this.getSort().getSprite().loadImage();
-		this.setCloseView(new Rectangle(0, this.getSort().getY(), this.getRoad().getWidth(), roadView));
+		this.setSpell(spell);
+		this.getSpell().getSprite().loadImage();
+		this.setCloseView(new Rectangle(0, this.getSpell().getY(), this.getRoad().getWidth(), roadView));
 		this.setMonster1(monster1);
 		this.getMonster1().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getMonster1().getY(), this.getRoad().getWidth(), roadView));
@@ -135,7 +135,7 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 				boardFrame.addSquare(this.road.getOnTheRoadXY(x, y), x, y);
 			}
 		}
-		boardFrame.addPawn(this.getSort());
+		boardFrame.addPawn(this.getSpell());
 		boardFrame.addPawn(this.getMyVehicle());
 		boardFrame.addPawn(this.getMonster1());
 		boardFrame.addPawn(this.getMonster2());
@@ -314,12 +314,12 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 		return this.monster1;
 	}
 
-	private void setSort(final IMobile sort) {
-		this.sort = sort;
+	private void setSpell(final IMobile spell) {
+		this.spell = spell;
 	}
 
-	private IMobile getSort() {
-		return this.sort;
+	private IMobile getSpell() {
+		return this.spell;
 	}
 
 	private void setMonster1(final IMobile monster1) {

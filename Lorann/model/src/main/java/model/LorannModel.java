@@ -19,7 +19,7 @@ public class LorannModel implements ILorannModel {
 	private IMap road;
 
 	/** The my vehicle. */
-	private IMobile myVehicle;
+	private IMobile myLorann;
 
 	private IMobile monster1;
 
@@ -29,7 +29,7 @@ public class LorannModel implements ILorannModel {
 
 	private IMobile monster4;
 
-	private IMobile sort;
+	private IMobile spell;
 
 	/**
 	 * Instantiates a new insane vehicles model.
@@ -64,8 +64,8 @@ public class LorannModel implements ILorannModel {
 			final int Monster3startX, final int Monster3startY, final int Monster4startX, final int Monster4startY)
 			throws IOException {
 		this.setRoad(new Map(fileName));
-		this.setSort(new Spell(0, 0, this.getRoad()));
-		this.setMyVehicle(new MyLorann(myVehicleStartX, myVehicleStartY, this.getRoad()));
+		this.setSpell(new Spell(0, 0, this.getRoad()));
+		this.setMyLorann(new MyLorann(myVehicleStartX, myVehicleStartY, this.getRoad()));
 		this.setMonster1(new Monster1(Monster1startX, Monster1startY, this.getRoad()));
 		this.setMonster2(new Monster2(Monster2startX, Monster2startY, this.getRoad()));
 		this.setMonster3(new Monster3(Monster3startX, Monster3startY, this.getRoad()));
@@ -96,18 +96,18 @@ public class LorannModel implements ILorannModel {
 	 * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getMyVehicle()
 	 */
 	@Override
-	public final IMobile getMyVehicle() {
-		return this.myVehicle;
+	public final IMobile getMyLorann() {
+		return this.myLorann;
 	}
 
 	/**
 	 * Sets the my vehicle.
 	 *
-	 * @param myVehicle
+	 * @param myLorann
 	 *            the myVehicle to set
 	 */
-	private void setMyVehicle(final IMobile myVehicle) {
-		this.myVehicle = myVehicle;
+	private void setMyLorann(final IMobile myLorann) {
+		this.myLorann = myLorann;
 	}
 
 	@Override
@@ -147,12 +147,12 @@ public class LorannModel implements ILorannModel {
 	}
 
 	@Override
-	public IMobile getSort() {
-		return this.sort;
+	public IMobile getSpell() {
+		return this.spell;
 	}
 
-	private void setSort(final IMobile sort) {
-		this.sort = sort;
+	private void setSpell(final IMobile spell) {
+		this.spell = spell;
 	}
 
 }
