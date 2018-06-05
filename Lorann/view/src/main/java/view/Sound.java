@@ -6,7 +6,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 public class Sound {
-
+	
 	public Sound() {
 		File Clap = new File("Music/3.wav");
 		PlaySound(Clap);
@@ -18,6 +18,6 @@ public class Sound {
 			clip.open(AudioSystem.getAudioInputStream(Sound));
 			clip.start();
 		} catch (Exception e) {
-		}
+			}
 	}
 }

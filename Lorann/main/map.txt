@@ -1,9 +1,9 @@
 31
 20
-x--(--x-----------------------x
-|     |xxxxxxxxxxxxxxxxxxxxxxx|
+x-----x-----------------------x
+|o    |xxxxxxxxxxxxxxxxxxxxxxx|
 |     |xxxxxxx-----xxxxx------x
-|     |xxxxxx|    X|xxx|      )
+|---- |xxxxxx|    X|xxx|      )
 |     |xxxxxx|     |xxx|      |
 |     |xxxxxx|     |xxx|   x--x
 |     |xxxxxx|     |xxx|   |xx|
@@ -11,7 +11,7 @@ x--(--x-----------------------x
 |     |xxxxxx|     |xxx|   |xx|
 |     |xxxxxx|     |xxx|   |xx|
 |     |xxxx--x     x---x   |xx|
-|---- |xxx|                |xx|
+|     |xxx|                |xx|
 |     x---x                x--x
 |               x------x      |
 |               |xxxxxx|      |

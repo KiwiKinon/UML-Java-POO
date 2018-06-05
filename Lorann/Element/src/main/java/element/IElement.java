@@ -4,13 +4,34 @@ import java.awt.Image;
 
 import showboard.ISquare;
 
+/**
+ * <h1>The Interface IElement.</h1>
+ *
+ * @author Jade
+ * @version 0.1
+ * @see ISquare
+ */
 public interface IElement extends ISquare {
 
-	Sprite getSprite();
+    /**
+     * Gets the sprite.
+     *
+     * @return the sprite
+     */
+    Sprite getSprite();
 
-	Permeability getPermeability();
+    /**
+     * Gets the permeability.
+     *
+     * @return the permeability
+     */
+    Permeability getPermeability();
 
-	@Override
-	Image getImage();
+    /*
+     * (non-Javadoc)
+     * @see fr.exia.showboard.ISquare#getImage()
+     */
+    @Override
+    Image getImage();
 
 }
