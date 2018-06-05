@@ -1,13 +1,6 @@
 element\motionless\MotionlessElement.class
-element\motionless\HorizontalBone.class
 element\motionless\MotionlessElementsFactory.class
-element\motionless\GateClosed.class
 element\Element.class
-element\motionless\Ball.class
-element\motionless\Ground.class
-element\motionless\Round.class
 element\Sprite.class
 element\IElement.class
 element\Permeability.class
-element\motionless\GateOpen.class
-element\motionless\VerticalBone.class

@@ -52,6 +52,8 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 	/** The order performer. */
 	private IOrderPerformer orderPerformer;
 
+	private IMobile sort;
+
 	public static int BX;
 
 	private static int BY;
@@ -64,18 +66,28 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 	 * @param myVehicle
 	 *            the my vehicle
 	 * @param monster2
+	 *            the monster2
 	 * @param monster4
+	 *            the monster 4
 	 * @param monster3
+	 *            the monster 3
+	 * @param monster1
+	 *            the monster 1
+	 * @param sort
+	 *            the sort
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
 	public LorannView(final IMap road, final IMobile myVehicle, final IMobile monster1, final IMobile monster2,
-			final IMobile monster3, final IMobile monster4) throws IOException {
+			final IMobile monster3, final IMobile monster4, final IMobile sort) throws IOException {
 		this.setView(roadView);
 		this.setRoad(road);
 		this.setMyVehicle(myVehicle);
 		this.getMyVehicle().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getMyVehicle().getY(), this.getRoad().getWidth(), roadView));
+		this.setSort(sort);
+		this.getSort().getSprite().loadImage();
+		this.setCloseView(new Rectangle(0, this.getSort().getY(), this.getRoad().getWidth(), roadView));
 		this.setMonster1(monster1);
 		this.getMonster1().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getMonster1().getY(), this.getRoad().getWidth(), roadView));
@@ -88,6 +100,7 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 		this.setMonster4(monster4);
 		this.getMonster4().getSprite().loadImage();
 		this.setCloseView(new Rectangle(0, this.getMonster4().getY(), this.getRoad().getWidth(), roadView));
+
 		SwingUtilities.invokeLater(this);
 	}
 
@@ -122,6 +135,7 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 				boardFrame.addSquare(this.road.getOnTheRoadXY(x, y), x, y);
 			}
 		}
+		boardFrame.addPawn(this.getSort());
 		boardFrame.addPawn(this.getMyVehicle());
 		boardFrame.addPawn(this.getMonster1());
 		boardFrame.addPawn(this.getMonster2());
@@ -132,6 +146,7 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 		this.followMyVehicle();
 
 		boardFrame.setVisible(true);
+
 	}
 
 	/**
@@ -191,6 +206,9 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 			break;
 		case KeyEvent.VK_NUMPAD3:
 			userOrder = UserOrder.BD;
+			break;
+		case KeyEvent.VK_ENTER:
+			userOrder = UserOrder.ENTER;
 			break;
 		default:
 			userOrder = UserOrder.NOP;
@@ -294,6 +312,14 @@ public class LorannView implements Runnable, KeyListener, ILorannView {
 
 	private IMobile getMonster1() {
 		return this.monster1;
+	}
+
+	private void setSort(final IMobile sort) {
+		this.sort = sort;
+	}
+
+	private IMobile getSort() {
+		return this.sort;
 	}
 
 	private void setMonster1(final IMobile monster1) {

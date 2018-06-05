@@ -163,6 +163,19 @@ public class Monster2 extends Mobile {
 		
 	}
 
+
+	@Override
+	public void moveSort() throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void State(int lorannX, int lorannY, Boolean state) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
 
 

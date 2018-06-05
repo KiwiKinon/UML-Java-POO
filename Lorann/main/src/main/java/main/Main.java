@@ -49,8 +49,8 @@ public abstract class Main {
      *             the interrupted exception
      */
     public static void main(final String[] args) throws IOException, InterruptedException {
-        final ILorannModel model = new LorannModel("map.txt", startX, startY, Monster1X, Monster1Y, Monster2X, Monster2Y, Monster3X, Monster3Y, Monster4X, Monster4Y);
-        final LorannView view = new LorannView(model.getRoad(), model.getMyVehicle(), model.getMonster1(), model.getMonster2(), model.getMonster3(), model.getMonster4());
+        final ILorannModel model = new LorannModel("road.txt", startX, startY, Monster1X, Monster1Y, Monster2X, Monster2Y, Monster3X, Monster3Y, Monster4X, Monster4Y);
+        final LorannView view = new LorannView(model.getRoad(), model.getMyVehicle(), model.getMonster1(), model.getMonster2(), model.getMonster3(), model.getMonster4(), model.getSort());
         final ILorannController controller = new LorannController(view, model);
         view.setOrderPerformer(controller.getOrderPeformer());
         Sound sound = new Sound();

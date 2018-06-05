@@ -33,4 +33,6 @@ public interface ILorannModel {
     
 	IMobile getMonster4();
 
+	IMobile getSort();
+
 }

@@ -15,70 +15,80 @@ import showboard.IPawn;
  */
 public interface IMobile extends IPawn, IElement {
 
-    /**
-     * Move up.
-     */
-    void moveUp();
+	/**
+	 * Move up.
+	 */
+	void moveUp();
 
-    /**
-     * Move left.
-     */
-    void moveLeft();
+	/**
+	 * Move left.
+	 */
+	void moveLeft();
 
-    /**
-     * Move down.
-     * @throws InterruptedException 
-     */
-    void moveDown() throws InterruptedException;
+	/**
+	 * Move down.
+	 * 
+	 * @throws InterruptedException
+	 *             the interrupted exception
+	 */
+	void moveDown() throws InterruptedException;
 
-    /**
-     * Move right.
-     * @throws InterruptedException 
-     */
-    void moveRight() throws InterruptedException;
+	/**
+	 * Move right.
+	 * 
+	 * @throws InterruptedException
+	 *             the interrupted exception
+	 */
+	void moveRight() throws InterruptedException;
 
-    /**
-     * Do nothing.
-     * @throws InterruptedException 
-     */
-    void doNothing() throws InterruptedException;
+	/**
+	 * Do nothing.
+	 * 
+	 * @throws InterruptedException
+	 *             the interrupted exception
+	 */
+	void doNothing() throws InterruptedException;
 
-    /**
-     * Gets the x.
-     *
-     * @return the x
-     */
-    @Override
-    int getX();
+	/**
+	 * Gets the x.
+	 *
+	 * @return the x
+	 */
+	@Override
+	int getX();
 
-    /**
-     * Gets the y.
-     *
-     * @return the y
-     */
-    @Override
-    int getY();
+	/**
+	 * Gets the y.
+	 *
+	 * @return the y
+	 */
+	@Override
+	int getY();
 
-    /**
-     * Checks if is alive.
-     *
-     * @return the alive
-     */
-    Boolean isAlive();
+	/**
+	 * Checks if is alive.
+	 *
+	 * @return the alive
+	 */
+	Boolean isAlive();
 
-    /**
-     * Checks if the car crashed.
-     *
-     * @return the boolean
-     */
-    Boolean isCrashed(int x, int y);
+	/**
+	 * Checks if the car crashed.
+	 *
+	 * @param x
+	 *            the x
+	 * @param y
+	 *            the y
+	 * @return the boolean
+	 */
+	Boolean isCrashed(int x, int y);
 
-    /*
-     * (non-Javadoc)
-     * @see fr.exia.showboard.IPawn#getPosition()
-     */
-    @Override
-    Point getPosition();
+	/*
+	 * (non-Javadoc)
+	 * @see fr.exia.showboard.IPawn#getPosition()
+	 */
+	@Override
+	Point getPosition();
 
 	void moveHG();
 
@@ -98,6 +108,10 @@ public interface IMobile extends IPawn, IElement {
 
 	void moveMonster4(int lorannX, int lorannY) throws InterruptedException;
 
-	//void openDoor();
+	void moveSort() throws InterruptedException;
+
+	void State(int lorannX, int lorannY, Boolean state);
+
+	// void openDoor();
 
 }

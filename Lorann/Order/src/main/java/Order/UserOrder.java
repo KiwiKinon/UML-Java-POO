@@ -21,6 +21,7 @@ public enum UserOrder {
     HG,
     HD,
     BG,
-    BD,
+    BD, 
+    ENTER,
     
 }

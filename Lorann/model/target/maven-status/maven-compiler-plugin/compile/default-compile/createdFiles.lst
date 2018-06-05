@@ -3,8 +3,9 @@ element\mobile\IMobile.class
 element\mobile\Monster4.class
 model\ModelFacade.class
 element\mobile\Monster3.class
-model\Map.class
 element\mobile\Mobile.class
 model\dao\AbstractDAO.class
+element\mobile\Monster2.class
 element\mobile\Monster1.class
 model\dao\ExampleDAO.class
+element\mobile\Spell.class

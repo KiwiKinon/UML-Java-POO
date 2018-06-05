@@ -1,5 +1,5 @@
-showboard\ISquare.class
-showboard\IBoard.class
 showboard\BoardPanel.class
 showboard\BoardFrame.class
 showboard\IPawn.class
+showboard\ISquare.class
+showboard\IBoard.class
