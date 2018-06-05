@@ -1,1 +1,11 @@
-element\AppTest.class
+element\motionless\VerticalBoneTest.class
+element\motionless\GroundTest.class
+element\motionless\HorizontalBoneTest.class
+element\ElementTest.class
+element\motionless\GateOpenTest.class
+element\motionless\MotionlessElementsFactoryTest.class
+element\motionless\MotionlessElementTest.class
+element\motionless\RoundTest.class
+element\motionless\GateClosedTest.class
+element\motionless\BallTest.class
+element\SpriteTest.class
